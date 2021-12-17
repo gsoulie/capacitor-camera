@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>sandbox-camera</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-button class="btn-standard" (click)="takePicture()">Take photo</ion-button>
+  <ion-button class="btn-standard" (click)="loadPhotos()">Refresh</ion-button>
+  <ion-list>
+    <ion-item *ngFor="let file of images; let i = index; trackBy:trackFilePath">
+      <ion-thumbnail slot="start">
+        <ion-img [src]="file.data"></ion-img>
+      </ion-thumbnail>
+      <ion-label class="ion-text-wrap">
+        {{ file.name }}
+      </ion-label>
+      <ion-button fill="clear" slot="end" (click)="deletePhoto(file)">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
