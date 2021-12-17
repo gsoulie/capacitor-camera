@@ -4,7 +4,7 @@
 
 ## Installation
 
-**Documentation**
+**Documentation**     
 https://capacitorjs.com/docs/apis/camera      
 https://capacitorjs.com/docs/apis/filesystem       
 
